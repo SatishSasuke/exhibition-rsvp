@@ -85,7 +85,6 @@
 
         /* Image Background Wrappers */
         .hero-wrapper {
-            /* Uses o.jpeg with a gradient fading to solid black at the bottom */
             background: linear-gradient(
                 to bottom,
                 rgba(10, 13, 12, 0.4) 0%,
@@ -100,7 +99,6 @@
         }
 
         .parallax-wrapper {
-            /* Uses oo.jpg with a dark overlay and fixed attachment for a premium parallax scroll effect */
             background: linear-gradient(
                 to bottom,
                 #0a0d0c 0%,
@@ -254,11 +252,80 @@
             padding-right: 20px;
             text-align: left;
         }
+        
+        /* Official Partners / Footer Logos Section */
+        .partners-section {
+            padding: 100px 20px 60px 20px;
+            background: radial-gradient(circle at top, rgba(197, 160, 89, 0.05) 0%, #0a0d0c 60%);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            position: relative;
+        }
+
+        .partners-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        /* Glowing Medallion Design */
+        .partner-logo {
+            width: 140px;
+            height: 140px;
+            background-color: #ffffff; /* Gives JPGs a clean canvas */
+            border-radius: 50%; /* Perfect circle */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border: 2px solid rgba(197, 160, 89, 0.4);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.15),
+                        inset 0 0 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: default;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-hover);
+            /* Rich premium glow on hover */
+            box-shadow: 0 0 40px rgba(197, 160, 89, 0.7),
+                        0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .partner-logo img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .partner-logo:hover img {
+            transform: scale(1.1);
+        }
+
+        .footer-copyright {
+            margin-top: 80px;
+            font-size: 0.8rem;
+            color: #555;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section with Gold/Black Vein Background (o.jpeg) -->
+    <!-- Hero Section -->
     <div class="hero-wrapper">
         <div class="container hero">
             <span class="gold-label">Exhibition Registration · 2026</span>
@@ -280,20 +347,20 @@
         </div>
     </div>
 
-    <!-- Parallax Section with Earth Strata Background (oo.jpg) -->
+    <!-- Parallax Section -->
     <div class="parallax-wrapper">
         <div class="container">
             
             <!-- The Exhibition -->
             <section class="section">
                 <h2>The Exhibition</h2>
-                <p>Forged from ancient sand, limestone, geothermal water with and crystals, The Living Laboratory is set within a pristine, 400-million-year-old limestone cave. The exhibition traces the classical elements through masterworks by local and international artists; blending physical fine art and raw geological specimens under a strict zero-impact mandate.</p>
+                <p>Forged from ancient sand, limestone, geothermal water and crystals, The Living Laboratory is set within a pristine, 400-million-year-old limestone cave. The exhibition traces the classical elements through masterworks by local and international artists; blending physical fine art and raw geological specimens under a strict zero-impact mandate.</p>
                 <p>Each chamber serves as a self-contained sanctuary across our three pillars of convergence: Ecological, Elemental, and Resonant. We invite guests to navigate the subterranean circuit at their own pace, guided only by sound and light.</p>
-                <h3>The Lithic Codex: Digitally Immortalised</h3>
+                <h3 style="margin-top: 40px; color: var(--gold-accent); margin-bottom: 20px;">The Lithic Codex: Digitally Immortalised</h3>
                 <p>To transcend physical boundaries, the subterranean circuit is anchored by our official phygital platform: The Lithic Codex. Engineered with visionary local and international tech partners, it integrates secure blockchain provenance and tactile NFC technology to act as an immutable digital twin, bridging contemporary fine art, somatic wellbeing, and geological conservation.</p>
                 <p>More than a transient exhibition, this digital ecosystem ensures our December 2026 debut serves as a living archive, allowing the narrative to evolve and reach a global audience through 2030 and beyond.</p>
             </section>
-a
+
             <!-- Venue & Logistics -->
             <section class="section">
                 <h2>Venue & Hours</h2>
@@ -316,9 +383,9 @@ a
         </div>
     </div>
 
-    <!-- FAQ Section (Solid Black Background) -->
+    <!-- FAQ Section -->
     <div class="container">
-        <section class="section" style="margin-bottom: 40px;">
+        <section class="section" style="margin-bottom: 20px;">
             <span class="gold-label">Before You Arrive</span>
             <h2>Frequently Asked</h2>
             
@@ -338,7 +405,7 @@ a
             
             <div class="faq-item">
                 <details>
-                    <summary>Does children need their own reservation?</summary>
+                    <summary>Do children need their own reservation?</summary>
                     <p>Yes. To preserve the intimacy of the experience and uphold our zero-impact safety mandate, entry into the subterranean chambers is strictly limited to batches of 15 guests per time slot. Please ensure you reserve a slot for every eligible member of your party (aged 12 and above).</p>
                 </details>
             </div>
@@ -358,6 +425,34 @@ a
             </div>
         </section>
     </div>
+
+    <!-- Official Partners & Footer Section -->
+    <footer class="partners-section">
+        <div class="partners-content">
+            <span class="gold-label">In Collaboration With</span>
+            <h2>Our Visionary Partners</h2>
+            
+            <!-- Logo Grid -->
+            <div class="partners-grid">
+                <div class="partner-logo"><img src="1.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="2.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="3.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="4.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="5.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="6.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="7.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="8.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="9.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="10.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="11.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="12.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="13.png" alt="Partner Logo"></div>
+                <div class="partner-logo"><img src="14.png" alt="Partner Logo"></div>
+            </div>
+            
+            <p class="footer-copyright">&copy; 2026 The Living Lab. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <!-- Live Timer Script -->
     <script>
