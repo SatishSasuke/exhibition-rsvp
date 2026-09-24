@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Living Lab | Exhibition Registration 2026</title>
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Variables & Reset */
+        :root {
+            --bg-color: #0a0d0c;
+            --text-main: #e0e0e0;
+            --gold-accent: #c5a059;
+            --gold-hover: #dfb86c;
+            --border-color: #2a2a2a;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            color: #ffffff;
+            margin: 20px 0;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        h2 {
+            color: var(--gold-accent);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            color: #d0d0d0;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .gold-label {
+            color: var(--gold-accent);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Image Background Wrappers */
+        .hero-wrapper {
+            /* Uses o.jpeg with a gradient fading to solid black at the bottom */
+            background: linear-gradient(
+                to bottom,
+                rgba(10, 13, 12, 0.4) 0%,
+                rgba(10, 13, 12, 0.8) 70%,
+                #0a0d0c 100%
+            ), url('o.jpeg') center/cover no-repeat;
+            width: 100%;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .parallax-wrapper {
+            /* Uses oo.jpg with a dark overlay and fixed attachment for a premium parallax scroll effect */
+            background: linear-gradient(
+                to bottom,
+                #0a0d0c 0%,
+                rgba(10, 13, 12, 0.85) 20%,
+                rgba(10, 13, 12, 0.85) 80%,
+                #0a0d0c 100%
+            ), url('oo.jpg') center/cover no-repeat fixed;
+            width: 100%;
+        }
+
+        /* Hero / Timer Section */
+        .hero {
+            text-align: center;
+            width: 100%;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            color: #ffffff;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+        }
+
+        .timer-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 65px;
+        }
+
+        .timer-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            color: var(--gold-accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            text-shadow: none;
+        }
+
+        .btn {
+            background-color: var(--gold-accent);
+            color: var(--bg-color);
+            border: none;
+            padding: 18px 45px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .btn:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.3);
+        }
+
+        /* Text Sections */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #cccccc;
+            text-align: center;
+        }
+
+        /* Logistics Grid */
+        .logistics-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            background: rgba(10, 13, 12, 0.6);
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+        }
+
+        @media(min-width: 600px) {
+            .logistics-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .logistics-item h3 {
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--gold-accent);
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .logistics-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        /* FAQ Accordions */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 25px 0;
+        }
+
+        details summary {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: #ffffff;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        details summary:hover {
+            color: var(--gold-accent);
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details summary::after {
+            content: '+';
+            color: var(--gold-accent);
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        details p {
+            margin-top: 15px;
+            font-size: 1.05rem;
+            color: #b0b0b0;
+            padding-right: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section with Gold/Black Vein Background (o.jpeg) -->
+    <div class="hero-wrapper">
+        <div class="container hero">
+            <span class="gold-label">Exhibition Registration · 2026</span>
+            <h1>THE LIVING LAB</h1>
+            <p class="subtitle">Experience five elemental chambers—Earth, Water, Fire, Wind, and Ether—arranged as a living codex of the world beneath our feet.</p>
+            
+            <div class="timer">
+                <div class="timer-block" id="days">00<span class="timer-label">Days</span></div>
+                <div>:</div>
+                <div class="timer-block" id="hours">00<span class="timer-label">Hrs</span></div>
+                <div>:</div>
+                <div class="timer-block" id="minutes">00<span class="timer-label">Min</span></div>
+                <div>:</div>
+                <div class="timer-block" id="seconds">00<span class="timer-label">Sec</span></div>
+            </div>
+
+            <p style="margin-bottom: 35px; font-size: 0.95rem; color: #a0a0a0; letter-spacing: 1px;">Dec 1–14, 2026 · The Banjaran Hotsprings Retreat</p>
+            <a href="https://forms.gle/no2vLPYPyoxchYv58" target="_blank" class="btn" style="text-decoration: none; display: inline-block;">Reserve Your Slot</a>
+        </div>
+    </div>
+
+    <!-- Parallax Section with Earth Strata Background (oo.jpg) -->
+    <div class="parallax-wrapper">
+        <div class="container">
+            
+            <!-- The Exhibition -->
+            <section class="section">
+                <h2>The Exhibition</h2>
+                <p>A codex carved from stone, light, and current, The Living Lab traces the classical elements through mineral specimens, immersive installations, and a digital twin revealing the strata hidden beneath every stone.</p>
+                <p>Each chamber operates as a self-contained study across three pillars: Ecological, Elemental, and Resonant. Guests navigate the circuit at their own pace, guided by hairline maps and quiet light.</p>
+            </section>
+
+            <!-- Venue & Logistics -->
+            <section class="section">
+                <h2>Venue & Hours</h2>
+                <div class="logistics-grid">
+                    <div class="logistics-item">
+                        <h3>LOCATION</h3>
+                        <p>Meditation Cave,<br>The Banjaran Hotsprings Retreat</p>
+                    </div>
+                    <div class="logistics-item">
+                        <h3>OPEN HOURS</h3>
+                        <p>Dec 1–14, 2026<br>10:00 AM – 4:00 PM daily</p>
+                    </div>
+                    <div class="logistics-item" style="grid-column: 1 / -1;">
+                        <h3>GETTING THERE</h3>
+                        <p>Public transit and accessible entrances are available; on-site parking is limited, making nearby lots recommended.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- FAQ Section (Solid Black Background) -->
+    <div class="container">
+        <section class="section" style="margin-bottom: 40px;">
+            <span class="gold-label">Before You Arrive</span>
+            <h2>Frequently Asked</h2>
+            
+            <div class="faq-item">
+                <details>
+                    <summary>Is entry free?</summary>
+                    <p>Yes. The Living Lab is offered without charge; a reservation simply secures your passage through each elemental chamber.</p>
+                </details>
+            </div>
+            
+            <div class="faq-item">
+                <details>
+                    <summary>Who may attend?</summary>
+                    <p>The exhibition welcomes all ages. Guests under 12 should be accompanied by an adult throughout the circuit.</p>
+                </details>
+            </div>
+            
+            <div class="faq-item">
+                <details>
+                    <summary>Do children need their own reservation?</summary>
+                    <p>Please reserve one slot for every visitor in your party, including children, so we can pace each chamber comfortably.</p>
+                </details>
+            </div>
+            
+            <div class="faq-item">
+                <details>
+                    <summary>Is photography permitted?</summary>
+                    <p>Photography for personal use is welcomed. We ask that flash be silenced near the crystalline installations.</p>
+                </details>
+            </div>
+            
+            <div class="faq-item">
+                <details>
+                    <summary>What should I bring?</summary>
+                    <p>Only your curiosity. Comfortable footwear is recommended for the full circuit through all five elements.</p>
+                </details>
+            </div>
+        </section>
+    </div>
+
+    <!-- Live Timer Script -->
+    <script>
+        const targetDate = new Date("Dec 1, 2026 10:00:00 GMT+0800").getTime();
+
+        const updateTimer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(updateTimer);
+                document.getElementById("days").innerHTML = `00<span class="timer-label">Days</span>`;
+                document.getElementById("hours").innerHTML = `00<span class="timer-label">Hrs</span>`;
+                document.getElementById("minutes").innerHTML = `00<span class="timer-label">Min</span>`;
+                document.getElementById("seconds").innerHTML = `00<span class="timer-label">Sec</span>`;
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = `${days}<span class="timer-label">Days</span>`;
+            document.getElementById("hours").innerHTML = `${hours.toString().padStart(2, '0')}<span class="timer-label">Hrs</span>`;
+            document.getElementById("minutes").innerHTML = `${minutes.toString().padStart(2, '0')}<span class="timer-label">Min</span>`;
+            document.getElementById("seconds").innerHTML = `${seconds.toString().padStart(2, '0')}<span class="timer-label">Sec</span>`;
+            
+        }, 1000);
+    </script>
+</body>
+</html>
