@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Living Lab | Exhibition Registration 2026</title>
+    <title>The Living Laboratory | Exhibition Registration 2026</title>
     <!-- Google Fonts for elegant typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -321,6 +321,54 @@
             letter-spacing: 2px;
             text-transform: uppercase;
         }
+        /* Wellness Split Section */
+        .wellness-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        @media(min-width: 800px) {
+            .wellness-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .wellness-image {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8),
+                        0 0 20px rgba(197, 160, 89, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .wellness-image:hover {
+            transform: scale(1.02);
+            border-color: rgba(197, 160, 89, 0.6);
+        }
+
+        .wellness-content h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .wellness-content h3 {
+            text-align: left;
+            color: var(--gold-accent);
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            margin: 30px 0 15px 0;
+            letter-spacing: 1px;
+        }
+
+        .wellness-content p {
+            text-align: left;
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -382,7 +430,22 @@
 
         </div>
     </div>
-
+<!-- Wellness Section -->
+    <div class="container">
+        <section class="wellness-section">
+            <div class="wellness-image-container">
+                <img src="image_f0be1d.jpg" alt="Glowing geometric lotus carving in cave" class="wellness-image">
+            </div>
+            
+            <div class="wellness-content">
+                <h2>Reinterpreting Wellness</h2>
+                <p>Situated within Perak’s designated national geoparks, The Living Laboratory serves as a premier cultural anchor for the state's growing wellness tourism sector. By converging ancient geological heritage with frontier phygital technology, the exhibition bridges the region's raw natural history with contemporary somatic practices.</p>
+                
+                <h3>The 8 Pillars of Modern Wellness</h3>
+                <p>Through these installations, our curated artists are challenged to express their creativity through the 8 pillars of modern wellness. Reinterpreted through the lens of The Living Laboratory, these artworks are not merely objects to be viewed. They are immersive tools designed to restore focus, provoke thought, and reconnect the human spirit with the natural world in an increasingly digital era.</p>
+            </div>
+        </section>
+    </div>
     <!-- FAQ Section -->
     <div class="container">
         <section class="section" style="margin-bottom: 20px;">
